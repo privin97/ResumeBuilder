@@ -22,12 +22,26 @@ body {
     margin: auto;
 }
 
+.title p {
+    animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+}
+
+@keyframes reveal {
+    0% {
+      transform: translate(0,100%);
+    }
+    100% {
+      transform: translate(0,0);
+    }
+  }
+
 /* Center Column */
 
 .section-center {
     background: rgb(251, 251, 251);
     height: 100vh;
     display: flex;
+    border-right: 1px solid #EFECEC;
 }
 
 /* Block One */
@@ -214,8 +228,90 @@ body {
     display: flex;
 }
 
+/* Preview Education */
+
 .preview-education {
     margin: auto;
+    line-height: 0.5;
 }
 
+.preview-education #course_education {
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+}
 
+.preview-education #place_education {
+    text-align: left;
+    font-size: 15px;
+}
+
+.preview-education #date_education {
+    text-align: left;
+    font-size: 13px;
+}
+
+.preview-education #button_education {
+    width: 100%;
+    height: 2.1rem;
+    border-radius: 15px;
+    border: none;
+    background-color: #A7A7A7;
+    color: #2B2B2B;
+    margin-bottom: 15px;
+}
+
+.preview-education #button_education:hover {
+    width: 100%;
+    height: 2.1rem;
+    border-radius: 15px;
+    border: none;
+    background-color: #2B2B2B;
+    color: #fff;
+}
+
+/* End Preview Education */
+
+/* Preview Experience */
+
+.preview-experience {
+    margin: auto;
+    line-height: 0.5;
+}
+
+.preview-experience #name_employer {
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.preview-experience #position_employer {
+    text-align: left;
+    font-size: 15px;
+}
+
+.preview-experience #date_employer {
+    text-align: left;
+    font-size: 13px;
+}
+
+.preview-experience #button_employer {
+    width: 100%;
+    height: 2.1rem;
+    border-radius: 15px;
+    border: none;
+    background-color: #A7A7A7;
+    color: #2B2B2B;
+    margin-bottom: 15px;
+}
+
+.preview-experience #button_employer:hover {
+    width: 100%;
+    height: 2.1rem;
+    border-radius: 15px;
+    border: none;
+    background-color: #2B2B2B;
+    color: #fff;
+}
+
+/* End Preview Experience */

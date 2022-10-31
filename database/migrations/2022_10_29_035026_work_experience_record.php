@@ -20,8 +20,6 @@ return new class extends Migration
             $table->string('position_of_job');
             $table->date('start_of_employer');
             $table->date('end_of_employer');
-            $table->string('job_responsibility_1');
-            $table->string('job_responsibility_2');
             $table->timestamps();
         });
     }

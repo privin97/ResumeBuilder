@@ -4,7 +4,7 @@
 
     <div class="row g-0 text-center">
 
-        <div class="col-md-5">    
+        <div class="col-md-4">    
             <div class='section-right'>
                 <div class="title">
                     <h1>Resume Builder</h1>
@@ -13,7 +13,7 @@
             </div>
         </div>
     
-        <div class="col-md-4">
+        <div class="col-md-5">
             <div class='section-center'>
 
                 <!-- First Block -->
@@ -120,6 +120,8 @@
         $('.resume').hide();
         $('.preview-education').hide();
         $('.preview-experience').hide();
+        $("#education-next").prop("disabled",true);
+        $("#experience-submit").prop("disabled",true);
     });
 
     $(document).on('click', '#create-resume', function () {
@@ -195,11 +197,25 @@
                 for (var i = 0; i < $count; i++){
 
                     $("#preview-education").append(
-                        '<h1>' + result[i]['course_of_education'] + '</h1>'
-                        + '<button onClick="deleteDataEducation(' + result[i]['id'] + ')">delete</button>'
+                        '<p id="course_education">' + result[i]['course_of_education'] + '</p>' 
+                        + '<p id="place_education">' + result[i]['place_of_education'] + '</p>'
+                        + '<p id="date_education"> From  : ' + result[i]['start_of_education'] + '</p>'
+                        + '<p id="date_education"> Until : ' + result[i]['end_of_education'] + '</p>'
+                        + '<button id="button_education" onClick="deleteDataEducation(' + result[i]['id'] + ')">Delete</button>'
                     );
                 }
-                
+
+                if($count > 0) {
+                    $("#education-next").prop("disabled",false);
+                } else {
+                    $("#education-next").prop("disabled",true);
+                }
+
+                if($count > 2) {
+                    $("#education-add").prop("disabled",true);
+                } else {
+                    $("#education-add").prop("disabled",false);
+                }
             }
         });
     }
@@ -269,9 +285,24 @@
                 
                 for (var i = 0; i < $count; i++){
                     $("#preview-experience").append(
-                        '<h1>' + result[i]['name_of_employer'] + '</h1>'
-                        +  '<button onClick="deleteDataExperience(' + result[i]['id'] + ')">delete</button>'
+                        '<p id="name_employer">' + result[i]['name_of_employer'] + '</p>' 
+                        + '<p id="position_employer">' + result[i]['position_of_job'] + '</p>'
+                        + '<p id="date_employer"> From  : ' + result[i]['start_of_employer'] + '</p>'
+                        + '<p id="date_employer"> Until : ' + result[i]['end_of_employer'] + '</p>'
+                        + '<button id="button_employer" onClick="deleteDataExperience(' + result[i]['id'] + ')">Delete</button>'
                     );
+                }
+
+                if ($count > 0) {
+                    $("#experience-submit").prop("disabled",false);
+                } else {
+                    $("#experience-submit").prop("disabled",true);
+                }
+
+                if($count > 2) {
+                    $("#experience-add").prop("disabled",true);
+                } else {
+                    $("#experience-add").prop("disabled",false);
                 }
                 
             }

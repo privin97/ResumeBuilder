@@ -4,27 +4,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Resume</title>
+
+    <link rel="stylesheet" href="{{ asset('resume_builder') }}/resume.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
 
-    <h1>Education History</h1>
-    @foreach($education as $data)
-    <ol>
-        <li>{{ $data->course_of_education }}</li>
-        <li>{{ $data->place_of_education }}</li>
-        <li>{{ $data->start_of_education }}</li>
-        <li>{{ $data->end_of_education }}</li>
-    </ol>
-    @endforeach
+    <div class="row g-0 text-center">
 
-    <h1>Work Experience</h1>
-    @foreach($experience as $data)
-    <ol>
-        <li>{{ $data->name_of_employer }}</li>
-        <li>{{ $data->position_of_job }}</li>
-        <li>{{ $data->start_of_employer }}</li>
-        <li>{{ $data->end_of_employer }}</li>
-    </ol>
-    @endforeach
+        <div class="col-md-6"> 
+            <div class="section-one">
+                <div class="education">
+                    <h1>Education History</h1>
+                    @foreach($education as $data)
+                    <p id='course_education'>{{ $data->course_of_education }}</p>
+                    <p id='place_education'>{{ $data->place_of_education }}</p>
+                    <p id='date_education'>From  : {{ $data->start_of_education }}</p>
+                    <p id='date_education'>Until : {{ $data->end_of_education }}</p>
+                    <br>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6"> 
+            <div class="section-two">
+                <div class="experience">
+                    <h1>Work Experience</h1>
+                    @foreach($experience as $data)
+                    <p id='name_employer'>{{ $data->name_of_employer }}</p>
+                    <p id='position_employer'>{{ $data->position_of_job }}</p>
+                    <p id='date_employer'>From  : {{ $data->start_of_employer }}</p>
+                    <p id='date_employer'>Until : {{ $data->end_of_employer }}</p>
+                    <br>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

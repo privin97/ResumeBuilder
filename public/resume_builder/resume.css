@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap');
+
+* {
+    background-color: #0F0F0F;
+    font-family: 'Poppins';
+}
+
+.section-one .section-two {
+    height: 100vh;
+    width: 100%;
+}
+
+/* Right Column */
+
+.section-one {
+    color: #EFECEC;
+    height: 100vh;
+    display: flex;
+    border: none;
+}
+
+.education {
+    margin: auto;
+    line-height: 0.5;
+    animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+}
+
+@keyframes reveal {
+    0% {
+      transform: translate(0,100%);
+    }
+    100% {
+      transform: translate(0,0);
+    }
+  }
+
+.education h1 {
+    margin-bottom: 15px;
+}
+
+.education #course_education {
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.education #place_education {
+    text-align: left;
+    font-size: 15px;
+}
+
+.education #date_education {
+    text-align: left;
+    font-size: 13px;
+}
+
+.section-two {
+    color: #EFECEC;
+    height: 100vh;
+    display: flex;
+    border: none;
+}
+
+.experience {
+    margin: auto;
+    line-height: 0.5;
+    animation: reveal2 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+}
+
+@keyframes reveal2 {
+    0% {
+      transform: translate(0,100%);
+    }
+    100% {
+      transform: translate(0,0);
+    }
+  }
+
+.experience h1 {
+    margin-bottom: 15px;
+}
+
+.experience #name_employer {
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.experience #position_employer {
+    text-align: left;
+    font-size: 15px;
+}
+
+.experience #date_employer {
+    text-align: left;
+    font-size: 13px;
+}
+
