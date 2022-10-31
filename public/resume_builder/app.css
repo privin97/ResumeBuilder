@@ -1,0 +1,221 @@
+body {
+    font-family: "Signika Negative", sans-serif;
+}
+
+.section-right .section-center .section-left {
+    height: 100vh;
+    width: 100%;
+}
+
+/* Right Column */
+
+.section-right {
+    background: rgb(251, 251, 251);
+    color: #0F0F0F;
+    height: 100vh;
+    display: flex;
+    border: none;
+    border-right: 1px solid #EFECEC;
+}
+
+.title {
+    margin: auto;
+}
+
+/* Center Column */
+
+.section-center {
+    background: rgb(251, 251, 251);
+    height: 100vh;
+    display: flex;
+}
+
+/* Block One */
+
+.create-button{
+    margin: auto;
+}
+
+.main-button {
+    width: 15em;
+    height: 3em;
+    background-color: #0F0F0F;
+    color: rgb(251, 251, 251);
+    border-radius: 40px;
+}
+
+.main-button:hover {
+    background-color: rgb(251, 251, 251);
+    color: #0F0F0F;
+}
+
+/* End of Block One */
+
+/* Block Two */
+
+.education-record {
+    margin: auto;
+    width: 90%;
+    box-shadow: 
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    border-radius: 15px 15px 0px 0px;
+}
+
+.title-form {
+    text-align: left;
+    padding: 1em;
+    background-color: #2B2B2B;
+    color: rgb(251, 251, 251);
+    border-radius: 15px 15px 0px 0px;
+}
+
+.education-form {
+    /* border: 1px solid #0F0F0F; */
+    padding: 15px;
+}
+
+.education-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+.education-form input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+.education-form label {
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.education-buttons button {
+    width: 40%;
+    height: 3rem;
+    border-radius: 15px;
+    border: none;
+    background-color: #fff;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.education-buttons button:hover {
+    background-color: #2B2B2B;
+    color: #fff;
+    
+}
+
+/* End of Block Two */
+
+/* Block Three */
+
+.work-experience-record {
+    margin: auto;
+    width: 90%;    
+    border-radius: 15px 15px 0px 0px;
+    box-shadow: 
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.experience-form {
+    /* border: 1px solid #0F0F0F; */
+    padding: 15px;
+}
+
+.experience-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+.experience-form input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+.experience-form label {
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.experience-buttons button {
+    width: 30%;
+    height: 3rem;
+    border-radius: 15px;
+    border: none;
+    background-color: #fff;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.experience-buttons button:hover {
+    background-color: #2B2B2B;
+    color: #fff;
+    
+}
+
+/* End of Block Three */
+
+/* Fourth Block */
+
+.resume {
+    margin: auto;
+    width: 90%;    
+    box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    float: left;
+    height: 3rem;
+}
+
+.resume input {
+    width: 50%;
+    height: 100%;
+    float: left;
+    outline: none;
+    border: none;
+    padding: 5px;
+}
+
+.resume button {
+    width: 25%;
+    height: 100%;
+    float: left;
+    border: none;
+    background-color: #A7A7A7;
+    color: #2B2B2B;
+}
+
+.resume button:hover {
+    background-color: #2B2B2B;
+    color: #fff;
+}
+
+/* End of Block Fourth */
+
+/* Left Column */
+
+.section-left {
+    background: rgb(251, 251, 251);
+    height: 100vh;
+    display: flex;
+}
+
+.preview-education {
+    margin: auto;
+}
+
+
