@@ -1,4 +1,5 @@
-body {
+
+* {
     font-family: "Signika Negative", sans-serif;
 }
 
@@ -101,7 +102,7 @@ body {
     outline: none;
 }
 
-.education-form input[type=text]:focus {
+.education-form input:focus {
     border: 3px solid #555;
 }
 
@@ -127,6 +128,27 @@ body {
     
 }
 
+.disclaimer-education {
+    float: left;
+    padding-left: 20px;
+    padding-top: 10px;
+    text-align: left;
+    line-height: 0.5;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.disclaimer-education-blink {
+    animation: blinker-one 1s linear infinite;
+    color: red;
+}
+
+@keyframes blinker-one {
+    0% {
+      opacity: 0;
+    }
+  }
+
 /* End of Block Two */
 
 /* Block Three */
@@ -144,7 +166,7 @@ body {
     padding: 15px;
 }
 
-.experience-form input {
+.experience-form input[type='text'], input[type='date'] {
     width: 100%;
     padding: 10px;
     margin: 8px 0;
@@ -157,7 +179,7 @@ body {
     outline: none;
 }
 
-.experience-form input[type=text]:focus {
+.experience-form input[type='text']:focus, input[type='date']:focus {
     border: 3px solid #555;
 }
 
@@ -165,6 +187,27 @@ body {
     float: left;
     font-size: 13px;
     font-weight: bold;
+}
+
+.experience-form #label-check {
+    float: right;
+}
+
+.experience-form input[type='checkbox'] {
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+
+    width: 15px;
+    height: 15px;
+
+    margin-right: 5px;
+    margin-top: 1px;
+}
+
+.experience-form #present-work {
+    float: right;
+    padding-right: 5px;
 }
 
 .experience-buttons button {
@@ -182,6 +225,27 @@ body {
     color: #fff;
     
 }
+
+.disclaimer-experience {
+    float: left;
+    padding-left: 20px;
+    padding-top: 10px;
+    text-align: left;
+    line-height: 0.5;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.disclaimer-experience-blink {
+    animation: blinker-two 1s linear infinite;
+    color: red;
+}
+
+@keyframes blinker-two {
+    0% {
+      opacity: 0;
+    }
+  }
 
 /* End of Block Three */
 
@@ -233,11 +297,13 @@ body {
 .preview-education {
     margin: auto;
     line-height: 0.5;
+    width: 80%;
 }
 
 .preview-education #course_education {
     text-align: left;
     font-weight: bold;
+    line-height: 1;
     font-size: 20px;
 }
 
@@ -277,12 +343,14 @@ body {
 .preview-experience {
     margin: auto;
     line-height: 0.5;
+    width: 80%;
 }
 
 .preview-experience #name_employer {
     text-align: left;
     font-weight: bold;
     font-size: 20px;
+    line-height: 1;
 }
 
 .preview-experience #position_employer {

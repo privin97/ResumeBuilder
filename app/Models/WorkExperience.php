@@ -17,5 +17,6 @@ class WorkExperience extends Model
         'position_of_job',
         'start_of_employer',
         'end_of_employer',
+        'present'
     ];
 }

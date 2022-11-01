@@ -36,7 +36,12 @@
                     <p id='name_employer'>{{ $data->name_of_employer }}</p>
                     <p id='position_employer'>{{ $data->position_of_job }}</p>
                     <p id='date_employer'>From  : {{ $data->start_of_employer }}</p>
+                    @if($data->present == 'true')
+                    <p id='date_employer'>Until : Present</p>
+                    @else
                     <p id='date_employer'>Until : {{ $data->end_of_employer }}</p>
+                    @endif
+                    
                     <br>
                     @endforeach
                 </div>

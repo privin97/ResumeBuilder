@@ -19,7 +19,8 @@ return new class extends Migration
             $table->string('name_of_employer');
             $table->string('position_of_job');
             $table->date('start_of_employer');
-            $table->date('end_of_employer');
+            $table->date('end_of_employer')->nullable();;
+            $table->string('present')->nullable();;
             $table->timestamps();
         });
     }

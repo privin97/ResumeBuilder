@@ -47,6 +47,12 @@
                             <button id='education-next'>Next</button>
                         </div>
                     </div>
+
+                    <div class="disclaimer-education">
+                        <p id='disclaimer-education-1'>Min. one education history before proceed to next section</p>
+                        <p id='disclaimer-education-2'>Max. three education history</p>
+                        <p id='disclaimer-education-3'>Please do fill all the fields to add</p>
+                    </div>
                 </div>
 
                 <!-- Third Block -->
@@ -66,7 +72,14 @@
                         <label for="course">Start of Work</label>
                         <input type="date" placeholder='From' name="start_work" id="start_work">
 
-                        <label for="course">End of Work</label>
+                        <div class="col">
+                            <label for="course">End of Work</label>
+
+                            <div id="present-work">
+                                <input type="checkbox" name="present-work-check" id="present-work-check">
+                                <label id='label-check' for="present-work-check">Present</label>
+                            </div>
+                        </div>
                         <input type="date" placeholder='To' name="end_work" id="end_work">
                         
 
@@ -76,6 +89,12 @@
                             <button id='experience-add'>Add</button>
                             <button id='experience-submit'>Create Resume</button>
                         </div>
+                    </div>
+
+                    <div class="disclaimer-experience">
+                        <p id='disclaimer-experience-1'>Min. one experience history before proceed to create resume</p>
+                        <p id='disclaimer-experience-2'>Max. three experience history</p>
+                        <p id='disclaimer-experience-3'>Please do fill all the fields</p>
                     </div>
                 
                 </div>
@@ -154,7 +173,18 @@
 <!-- Add Education Record -->
 <script>
     $(document).on('click', '#education-add', function () {
-        addToServerEducation();
+        $course_education = $("#course_of_education").val();
+        $place_education = $("#place_of_education").val();
+        $start_education = $("#start_education").val();
+        $end_education = $("#end_education").val();
+
+        if (!$course_education || !$place_education || !$start_education || !$end_education)
+        {
+            $("#disclaimer-education-3").addClass("disclaimer-education-blink");
+        } else {
+            $("#disclaimer-education-3").removeClass("disclaimer-education-blink");
+            addToServerEducation();
+        }
     });
 
 
@@ -234,11 +264,41 @@
 
 <!-- Add Work Experience Record -->
 <script>
+
+    $(function() {
+        disable_end_date();
+        $("#present-work-check").click(disable_end_date);
+    });
+
+    function disable_end_date() {
+        if (this.checked) {
+            $("#end_work").attr("disabled", true);
+        } else {
+            $("#end_work").attr("disabled", false);
+        }
+    }
+
     $(document).on('click', '#experience-add', function () {
-        addToServerExperience();
+
+        $employer_name = $("#employer_name").val();
+        $work_position = $("#work_position").val();
+        $start_work = $("#start_work").val();
+        $end_work = $("#end_work").val();
+        $checkbox = document.getElementById('present-work-check').checked;
+
+        if (!$employer_name || !$work_position || !$start_work || (!$end_work && $checkbox != true))
+        {
+            $("#disclaimer-experience-3").addClass("disclaimer-experience-blink");
+        } else {
+            $("#disclaimer-experience-3").removeClass("disclaimer-experience-blink");
+            addToServerExperience();
+        }
     });
 
     function addToServerExperience() {
+
+        $checkbox = document.getElementById('present-work-check').checked;
+
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -253,6 +313,7 @@
                 position_of_job : $("#work_position").val(),
                 start_of_employer : $("#start_work").val(),
                 end_of_employer : $("#end_work").val(),
+                present: $checkbox,
             },
             success: function(result) {
                 var data = JSON.parse(JSON.stringify(result));
@@ -284,11 +345,18 @@
                 $("#preview-experience").empty().append('');
                 
                 for (var i = 0; i < $count; i++){
+
+                    if (result[i]['present'] == 'true') {
+                        $end = 'Present';
+                    } else {
+                        $end = result[i]['end_of_employer'];
+                    }
+                    
                     $("#preview-experience").append(
                         '<p id="name_employer">' + result[i]['name_of_employer'] + '</p>' 
                         + '<p id="position_employer">' + result[i]['position_of_job'] + '</p>'
                         + '<p id="date_employer"> From  : ' + result[i]['start_of_employer'] + '</p>'
-                        + '<p id="date_employer"> Until : ' + result[i]['end_of_employer'] + '</p>'
+                        + '<p id="date_employer"> Until : ' + $end + '</p>'
                         + '<button id="button_employer" onClick="deleteDataExperience(' + result[i]['id'] + ')">Delete</button>'
                     );
                 }
@@ -349,5 +417,6 @@
         $('#work_position').val('');
         $('#start_work').val('');
         $('#end_work').val('');
+        $('#present-work-check').prop('checked',false);
     }
 </script>

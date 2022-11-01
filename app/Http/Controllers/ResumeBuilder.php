@@ -77,6 +77,7 @@ class ResumeBuilder extends Controller
                 'position_of_job' => $request->position_of_job,
                 'start_of_employer' => $request->start_of_employer,
                 'end_of_employer' => $request->end_of_employer,
+                'present' => $request->present,
             ]);
 
             if($newrecord)
