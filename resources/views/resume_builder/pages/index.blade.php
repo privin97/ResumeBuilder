@@ -36,10 +36,10 @@
                         <input type="text" placeholder='Place' name="place_of_education" id="place_of_education">
 
                         <label for="course">Start of Education</label>
-                        <input type="date" placeholder='From' name="start_education" id="start_education">
+                        <input type="date" placeholder='From' name="start_education" id="start_education" max="2099-12-31">
 
                         <label for="course">End of Education</label>
-                        <input type="date" placeholder='To' name="end_education" id="end_education">
+                        <input type="date" placeholder='To' name="end_education" id="end_education" max="2099-12-31">
                         
                         <div class='education-buttons'>
                             <!-- <button>Add Education</button> -->
@@ -70,7 +70,7 @@
                         <input type="text" placeholder='Position' name="work_position" id="work_position">
                         
                         <label for="course">Start of Work</label>
-                        <input type="date" placeholder='From' name="start_work" id="start_work">
+                        <input type="date" placeholder='From' name="start_work" id="start_work" max="2099-12-31">
 
                         <div class="col">
                             <label for="course">End of Work</label>
@@ -80,7 +80,7 @@
                                 <label id='label-check' for="present-work-check">Present</label>
                             </div>
                         </div>
-                        <input type="date" placeholder='To' name="end_work" id="end_work">
+                        <input type="date" placeholder='To' name="end_work" id="end_work" max="2099-12-31">
                         
 
                         <div class='experience-buttons'>
