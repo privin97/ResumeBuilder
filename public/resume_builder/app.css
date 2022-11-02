@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Warang+Citi&display=swap');
 
 * {
     font-family: "Signika Negative", sans-serif;
@@ -136,6 +137,12 @@
     line-height: 0.5;
     font-weight: bold;
     font-size: 13px;
+    border-top: 1px solid #EFECEC;
+    width: 100%;
+}
+
+.disclaimer-education #disclaimer-education-1 {
+    line-height: 1;
 }
 
 .disclaimer-education-blink {
@@ -234,6 +241,12 @@
     line-height: 0.5;
     font-weight: bold;
     font-size: 13px;
+    border-top: 1px solid #EFECEC;
+    width: 100%;
+}
+
+.disclaimer-experience #disclaimer-experience-1 {
+    line-height: 1;
 }
 
 .disclaimer-experience-blink {
@@ -298,6 +311,7 @@
     margin: auto;
     line-height: 0.5;
     width: 80%;
+    font-family: 'Noto Sans Warang Citi', sans-serif;
 }
 
 .preview-education #course_education {
@@ -344,13 +358,13 @@
     margin: auto;
     line-height: 0.5;
     width: 80%;
+    font-family: 'Noto Sans Warang Citi', sans-serif;
 }
 
 .preview-experience #name_employer {
     text-align: left;
     font-weight: bold;
     font-size: 20px;
-    line-height: 1;
 }
 
 .preview-experience #position_employer {

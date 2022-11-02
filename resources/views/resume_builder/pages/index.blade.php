@@ -38,7 +38,7 @@
                         <label for="course">Start of Education</label>
                         <input type="date" placeholder='From' name="start_education" id="start_education">
 
-                        <label for="course">Start of Education</label>
+                        <label for="course">End of Education</label>
                         <input type="date" placeholder='To' name="end_education" id="end_education">
                         
                         <div class='education-buttons'>
@@ -229,8 +229,7 @@
                     $("#preview-education").append(
                         '<p id="course_education">' + result[i]['course_of_education'] + '</p>' 
                         + '<p id="place_education">' + result[i]['place_of_education'] + '</p>'
-                        + '<p id="date_education"> From  : ' + result[i]['start_of_education'] + '</p>'
-                        + '<p id="date_education"> Until : ' + result[i]['end_of_education'] + '</p>'
+                        + '<p id="date_education">' + result[i]['start_of_education'] + ' / ' + result[i]['end_of_education'] + '</p>'
                         + '<button id="button_education" onClick="deleteDataEducation(' + result[i]['id'] + ')">Delete</button>'
                     );
                 }
@@ -355,8 +354,7 @@
                     $("#preview-experience").append(
                         '<p id="name_employer">' + result[i]['name_of_employer'] + '</p>' 
                         + '<p id="position_employer">' + result[i]['position_of_job'] + '</p>'
-                        + '<p id="date_employer"> From  : ' + result[i]['start_of_employer'] + '</p>'
-                        + '<p id="date_employer"> Until : ' + $end + '</p>'
+                        + '<p id="date_employer">' + result[i]['start_of_employer'] + ' / ' + $end + '</p>'
                         + '<button id="button_employer" onClick="deleteDataExperience(' + result[i]['id'] + ')">Delete</button>'
                     );
                 }
