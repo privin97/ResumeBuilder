@@ -20,8 +20,7 @@
                     @foreach($education as $data)
                     <p id='course_education'>{{ $data->course_of_education }}</p>
                     <p id='place_education'>{{ $data->place_of_education }}</p>
-                    <p id='date_education'>From  : {{ $data->start_of_education }}</p>
-                    <p id='date_education'>Until : {{ $data->end_of_education }}</p>
+                    <p id='date_education'>{{ $data->start_of_education }} / {{ $data->end_of_education }}</p>
                     <br>
                     @endforeach
                 </div>
@@ -35,11 +34,10 @@
                     @foreach($experience as $data)
                     <p id='name_employer'>{{ $data->name_of_employer }}</p>
                     <p id='position_employer'>{{ $data->position_of_job }}</p>
-                    <p id='date_employer'>From  : {{ $data->start_of_employer }}</p>
                     @if($data->present == 'true')
-                    <p id='date_employer'>Until : Present</p>
+                        <p id='date_employer'>{{ $data->start_of_employer }} / Present</p>
                     @else
-                    <p id='date_employer'>Until : {{ $data->end_of_employer }}</p>
+                        <p id='date_employer'>{{ $data->start_of_employer }} / {{ $data->end_of_employer }}</p>
                     @endif
                     
                     <br>

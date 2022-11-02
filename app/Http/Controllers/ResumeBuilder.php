@@ -32,14 +32,7 @@ class ResumeBuilder extends Controller
                 'end_of_education' => $request->end_of_education,
             ]);
 
-            if($newrecord)
-            {
-                return '1';
-            }
-            else
-            {
-                return 'Unable to save the info';
-            }
+            return '1';
             
         } else {
             return '0';

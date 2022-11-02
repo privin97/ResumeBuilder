@@ -66,7 +66,7 @@
                         <label for="course">Name of Employer</label>
                         <input type="text" placeholder='Employer Name' name="employer_name" id="employer_name">
 
-                        <label for="course">Position</label>
+                        <label for="course">Position as</label>
                         <input type="text" placeholder='Position' name="work_position" id="work_position">
                         
                         <label for="course">Start of Work</label>

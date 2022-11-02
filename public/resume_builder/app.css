@@ -364,6 +364,7 @@
 .preview-experience #name_employer {
     text-align: left;
     font-weight: bold;
+    line-height: 1;
     font-size: 20px;
 }
 
