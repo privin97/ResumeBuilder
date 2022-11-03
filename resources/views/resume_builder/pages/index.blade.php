@@ -421,5 +421,6 @@
         $('#start_work').val('');
         $('#end_work').val('');
         $('#present-work-check').prop('checked',false);
+        $("#end_work").attr("disabled", false);
     }
 </script>
