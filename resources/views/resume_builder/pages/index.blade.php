@@ -209,9 +209,6 @@
                 console.log(JSON.stringify(data));
                 retreiveDataEducation();
             },
-            error: function(data) {
-               alert(JSON.stringify(data));
-            }
         });
     }
 
