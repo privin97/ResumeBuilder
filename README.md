@@ -1,6 +1,6 @@
 ## Instructions
 <ol>
-    <li>Clone the project into xampp or any web server (htdocs)</li>
+    <li>Clone the project into xampp or any web server</li>
     <li>Once the cloning is complete, start mysql</li>
     <li>After start mysql service, open the project with any editor with terminal</li>
     <li>run 'php artisan migrate', to create required tables</li>
