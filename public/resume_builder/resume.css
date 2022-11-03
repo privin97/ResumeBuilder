@@ -7,6 +7,10 @@
     font-family: 'Noto Sans Warang Citi', sans-serif;
 }
 
+a {
+    background-color: #FF6847;
+}
+
 .section-one .section-two {
     height: 100vh;
     width: 100%;
@@ -40,6 +44,7 @@
     margin-bottom: 15px;
 }
 
+
 .education #course_education {
     text-align: left;
     font-weight: bold;
@@ -49,6 +54,7 @@
 .education #place_education {
     text-align: left;
     font-size: 15px;
+    color: #FF6847;
 }
 
 .education #date_education {
@@ -80,6 +86,7 @@
 
 .experience h1 {
     margin-bottom: 15px;
+
 }
 
 .experience #name_employer {
@@ -91,6 +98,7 @@
 .experience #position_employer {
     text-align: left;
     font-size: 15px;
+    color: #FF6847;
 }
 
 .experience #date_employer {

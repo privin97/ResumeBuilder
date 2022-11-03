@@ -258,8 +258,7 @@
     0% {
       opacity: 0;
     }
-  }
-
+}
 /* End of Block Three */
 
 /* Fourth Block */
@@ -296,6 +295,15 @@
 }
 
 /* End of Block Fourth */
+
+/* Error Block */
+
+.error-display {
+    float: left;
+    padding: 20px;
+}
+
+/* End of Block Error */
 
 /* Left Column */
 

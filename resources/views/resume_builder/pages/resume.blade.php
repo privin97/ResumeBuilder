@@ -16,12 +16,12 @@
         <div class="col-md-6"> 
             <div class="section-one">
                 <div class="education">
-                    <h1>Education History</h1>
+                    <h1>Education <a>History</a></h1>
                     @foreach($education as $data)
                     <p id='course_education'>{{ $data->course_of_education }}</p>
                     <p id='place_education'>{{ $data->place_of_education }}</p>
                     <p id='date_education'>{{ $data->start_of_education }} / {{ $data->end_of_education }}</p>
-                    <br>
+                    <br><hr>
                     @endforeach
                 </div>
             </div>
@@ -30,7 +30,7 @@
         <div class="col-md-6"> 
             <div class="section-two">
                 <div class="experience">
-                    <h1>Work Experience</h1>
+                    <h1>Work <a>Experience</a></h1>
                     @foreach($experience as $data)
                     <p id='name_employer'>{{ $data->name_of_employer }}</p>
                     <p id='position_employer'>{{ $data->position_of_job }}</p>
@@ -39,8 +39,7 @@
                     @else
                         <p id='date_employer'>{{ $data->start_of_employer }} / {{ $data->end_of_employer }}</p>
                     @endif
-                    
-                    <br>
+                    <br><hr>
                     @endforeach
                 </div>
             </div>

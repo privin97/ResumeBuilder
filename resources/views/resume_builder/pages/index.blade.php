@@ -124,6 +124,7 @@
             </div>
         </div>
 
+
     </div>
 @endsection
 
@@ -207,6 +208,9 @@
             success: function(data) {
                 console.log(JSON.stringify(data));
                 retreiveDataEducation();
+            },
+            error: function(data) {
+               alert(JSON.stringify(data));
             }
         });
     }
@@ -371,7 +375,11 @@
                     $("#experience-add").prop("disabled",false);
                 }
                 
-            }
+            },
+            error: function(result) {
+                successmessage = 'SomeError';
+                $("label#successmessage").text(successmessage);
+            },
         });
     }
 
