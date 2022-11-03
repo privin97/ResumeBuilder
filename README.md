@@ -4,6 +4,7 @@
     <li>Once the cloning is complete, start mysql</li>
     <li>After start mysql service, open the project with any editor with terminal</li>
     <li>run 'php artisan migrate', to create required tables</li>
+    <li>run 'composer i', to create vendor files</li>
     <li>Then run 'php artisan serve'</li>
 </ol>
 
